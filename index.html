@@ -1,0 +1,27 @@
+<html>
+<ul id="main">
+
+</ul>
+    <script>
+        let files  = [
+            "angular.md",
+            "clientside.md",
+            "data.md",
+            "devops.md",
+            "main.md",
+            "microservices.md",
+            "angular.md",
+            "angular.md",
+        ];
+
+        let main = document.getElementById("main")
+
+        files.forEach(x => {
+            let item = document.createElement("li")
+            item.innerHTML = x
+            main.appendChild(item);
+        })
+
+
+    </script>
+</html>
