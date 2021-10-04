@@ -2,30 +2,32 @@
 # Overview
     * Full featured CLI, Testing, RxJS, HttpClient
 !["overview"](https://angular.io/generated/images/guide/architecture/overview2.png)
+
 # Modules
 > NgModules are containers for a cohesive block of code dedicated to an application domain, a workflow, or a closely related set of capabilities.
 
 * Lazy Loading - component tree not loaded into memory until needed
 
 # Cli
-    * Scaffolding
-    * Building
-    * Testing
+* Scaffolding
+* Building
+* Testing
+
 # Testing
-    * Cypress (e2e testing)
-        * test entire page (component interaction)
-    * Jasmine
-        * beforeEach
-        > Describe("MyTest", () => {
-        >   it('should return a value' () => {
-        >  })
-        >})
-        * spyOn
-        * HttpClientTestingModule
-        * Components
-            * compileComponents
-            * ComponentFixture
-    * .spec.ts
+* Cypress (e2e testing)
+    * test entire page (component interaction)
+* Jasmine
+    * beforeEach
+    > Describe("MyTest", () => {
+    >   it('should return a value' () => {
+    >  })
+    >})
+    * spyOn
+    * HttpClientTestingModule
+    * Components
+        * compileComponents
+        * ComponentFixture
+* .spec.ts
 
 # Change Detection
 > addEventListener sets isChanged property to 'true'
