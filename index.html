@@ -10,15 +10,17 @@
             "devops.md",
             "main.md",
             "microservices.md",
-            "angular.md",
-            "angular.md",
         ];
 
         let main = document.getElementById("main")
 
         files.forEach(x => {
             let item = document.createElement("li")
-            item.innerHTML = x
+            let link = document.createElement("a")
+            link.setAttribute("href", x);
+            link.innerHTML = x
+            item.appendChild(link);
+
             main.appendChild(item);
         })
 
