@@ -76,18 +76,6 @@
     * CI/CD
     * Kubernetes
  
-# Platform as a Service
-* Docker
-    * Engine 
-        * dockerd (daemon)
-        * Images
-        * Containers
-        * Services
-        * Volumes
-    * Tools
-        * Docker Compose (multicontainer applications)
-        * Docker Swarm (Clustering)
-        * Docker Volume (Disk persistence)
  
 # Testing
 * Unit Testing

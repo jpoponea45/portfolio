@@ -36,13 +36,11 @@
     * One Broker is the cluster controller
 * Partitions
     * Horizontal Scaling
+
+
+## Kafka Connect
+https://kafka.apache.org/documentation/#connect
+
 # Queuing
 ## Rabbit
 * NServiceBus
-
-# RDBMS
-* Indexing
-* Normalization
-
-# NoSQL
-    * Use Cases
