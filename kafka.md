@@ -1,10 +1,30 @@
-# Event Streaming
+# Event Based Architecture
+## Event Sourcing
+## Examples
+- Git Commit Log 
+- Accounting Ledger
+
+## Data at Rest
+    Data store is source of truth
+## Data in Flight
+    Log of events is source of truth
+
+
+
+# Distributed Event Streaming
 ## Kafka
-* Distributed 
 * Commit Log
+
+## Building blocks
+- Event Sources
+- Stream processing: Stream one topic into another topic
+- Event archive
+- Notifications
+
+(event log is kept 7 days by default)
+### Uses
 * Pub/Sub
 * FIFO queue
-* Topics
 * Kafka as a Database
     * Log compaction
     * Immutable Log

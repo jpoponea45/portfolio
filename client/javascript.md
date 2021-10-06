@@ -1,4 +1,8 @@
 
+# Concepts
+- Hoisting
+- Threading/Callbacks
+
 # Web sockets
 * Signal R
 * Pusher
@@ -24,6 +28,7 @@
 * iFrame
 
 # Async
+## Async/await
 ## Promises
 ## RxJS
 >library for composing asynchronous and event-based programs by using observable sequences.   
@@ -37,6 +42,7 @@
 * Subject 
 >special type of Observable that allows values to be multicasted to many Observers
 * Schedulers
+
 # PWA 
 * Proxy between browser and web server
 * Service Workers 
