@@ -13,6 +13,9 @@
 
 # Distributed Event Streaming
 ## Kafka
+
+!["Kafka"](https://i0.wp.com/learnbyinsight.com/wp-content/uploads/2020/07/Kafka-Internals-1.png?ssl=1)
+
 * Commit Log
 
 ## Building blocks

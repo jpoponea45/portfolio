@@ -44,16 +44,16 @@
 
 ## Workload Objects
 ### Pods 
-  >Basic scheduling unit 
+Basic scheduling unit 
 - Replica sets
-    > Maintain a stable set of replica pods at any given time
+> Maintain a stable set of replica pods at any given time
     - Guarantee the avaiability of a specified number of identical pods
 ### Services
-    > Set of pods working together
-    - Provides service discovery (environmental variables or Kubernetes DNS)
-    - Assigns stable IP and DNS name to service
-    - Load balancing
-    - Exposed inside (default) or outside container
+  > Set of pods working together
+- Provides service discovery (environmental variables or Kubernetes DNS)
+- Assigns stable IP and DNS name to service
+- Load balancing
+- Exposed inside (default) or outside container
 ### Volumes
   > Kubernetes files systems provide ephemeral storage (restarting pod wipes out data)
   - Persistent storage for lifetime of pod

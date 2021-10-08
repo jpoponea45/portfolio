@@ -54,7 +54,6 @@
 
 #  Cloud
 * Serverless
-* Elastisearch
  
 #  Infrastructure
 * Load Balancing
