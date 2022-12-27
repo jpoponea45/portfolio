@@ -4,23 +4,45 @@
     - Client Credentials 
     - Authentication Code
 - SAML 2.0
+    - ADFS federation
 - OpenID Connect
+- Federation (Social providers)
+    - TrimbleId
 
 
 ## ADR
-- Why bash
+- Why Shell
+    - Flexibility/control
+    - Adhears with current state of concourse pipelines/tasks
 - Why not python
-- 
+    - Default image support?
+    - Boto3 limitations (command line args) (--query)
+- Why not SAM
+    - Cloudformation templates
+- Why not SDK
+    - CloudFormation vs Terraform
 
 ## Crosscutting Concerns
 - Logging
     - CloudTrail 
     - Sumo Logic (collectors)
 
+## Limitations
+- Name length
+- Max resource servers
+- Max Scopes
+- Max Userpool Clients
+
+
 ## Client Credentials
 
 ### Deploy
 - Concourse
+    - Yaml Anchors
+    - Across: Modifier (experimental)
+        - Advantages 
+            - Reduced redundancy 
+            - external environments.yaml scripts
 - AWS CLI
 
 ### Self Service
