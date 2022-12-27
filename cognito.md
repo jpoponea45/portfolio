@@ -1,17 +1,17 @@
 # Cognito 
-> Identity and access management 
-- OAuth 2.0
-    - Client Credentials 
-    - Authentication Code
-- SAML 2.0
-    - ADFS federation
-- OpenID Connect
-- Federation (Social providers)
-    - TrimbleId
+**Identity and access management**
+## OAuth 2.0
+- Client Credentials 
+- Authentication Code
+## SAML 2.0
+- ADFS federation
+## OpenID Connect
+## Federation (Social providers)
+- TrimbleId
 
 
 ## ADR
-- Why Shell
+- Why Shell?
     - Flexibility/control
     - Adhears with current state of concourse pipelines/tasks
 - Why not python
@@ -26,6 +26,8 @@
 - Logging
     - CloudTrail 
     - Sumo Logic (collectors)
+- Monitoring
+    - CloudWatch
 
 ## Limitations
 - Name length
@@ -34,15 +36,16 @@
 - Max Userpool Clients
 
 
-## Client Credentials
+# Client Credentials Flow
 
-### Deploy
-- Concourse
-    - Yaml Anchors
-    - Across: Modifier (experimental)
-        - Advantages 
-            - Reduced redundancy 
-            - external environments.yaml scripts
+## Deploy
+### Concourse
+- Yaml Anchors
+- Across: Modifier (experimental)
+    - Advantages 
+        - Reduced redundancy 
+        - external environments.yaml scripts
+    - Limited deployments
 - AWS CLI
 
 ### Self Service
