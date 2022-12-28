@@ -9,6 +9,16 @@
 ## Federation (Social providers)
 - TrimbleId
 
+## Definitions
+### User Pool
+>The principle resource used to 
+- define users, 
+- define client/server integrations
+- Authenticate users and applications
+### Resource Server
+>
+### Application Client
+>Client credentials and scopes used to consume 
 
 ## ADR
 ### Why Shell?
@@ -79,3 +89,5 @@ iac-eb-central
 
 
 ## Authentication Code Flow
+
+TBD
