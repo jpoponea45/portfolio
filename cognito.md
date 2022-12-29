@@ -4,43 +4,48 @@ AWS Cognito allows us to create a centralized identity solution that supports
 - Web and Mobile applications
 - machine-to-machine communication
 
-# Definitions
 
-## Cognito 
-- AWS identity and access management
 
-## OAuth 2.0
+# OAuth 2.0
 ### Client Credentials grant 
 - intended to provide credentials to an application in order to authorize machine-to-machine requests
 
-### User Pool
+# AWS Cognito 
+- AWS identity and access management
+
+## User Pool
 - define users, 
 - define client/server integrations
 - Authenticate users and applications
 
-### Resource Server
+![Userpool](https://docs.aws.amazon.com/images/cognito/latest/developerguide/images/scenario-authentication-cup.png)
+
+## Resource Server
 - Manages access-protected resources. (**ONE OR MORE** services in the same business domain)
 - handles authenticated requests from an app that has an access token.
 - defines all scopes in that business domain
 
-### Application Client
-- defines client Id and client secret
-- declares one or more resource server scopes scopes 
+![ResourceServer](https://docs.aws.amazon.com/images/cognito/latest/developerguide/images/resource-servers.png)
 
-## ADR
-### Why Shell?
+## Application Client
+- Entity within a user pool that has permission to call unauthenticated API operations
+- confidential client with a client secret
+
+
+# ADRs
+## Why Shell?
 - Flexibility/control
 - Adhears with current state of concourse pipelines/tasks
 
-### Why not Python?
+## Why not Python?
 - Default image support for python?
 - Boto3 limitations (command line args --filter --query)
 
-### Why not SAM?
+## Why not SAM?
 - Cloudformation vs Terraform
 - Resources that were not initially created with SAM cannot be migrated 
 
-### Why not CDK?
+## Why not CDK?
 - CloudFormation vs Terraform
 
 # Crosscutting Concerns
@@ -68,7 +73,7 @@ AWS Cognito allows us to create a centralized identity solution that supports
 
 # Deployment
 
-### Concourse
+## Concourse
 - [Yaml Anchors](https://docs.concourse.farm/cookbook/use-yaml-anchor-and-alias)
 - [Across Step Modifier](https://concourse-ci.org/across-step.html)
     - DRY
