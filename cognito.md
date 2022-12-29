@@ -1,24 +1,32 @@
-# Cognito 
-**Identity and access management**
-## OAuth 2.0
-- Client Credentials 
-- Authentication Code
-## SAML 2.0
-- ADFS federation
-## OpenID Connect
-## Federation (Social providers)
-- TrimbleId
+# Overview
 
-## Definitions
+AWS Cognito allows us to create a centralized identity solution that supports
+- Web and Mobile applications
+- machine-to-machine communication
+
+# Definitions
+
+## Cognito 
+- AWS identity and access management
+
+## OAuth 2.0
+### Client Credentials grant 
+- intended to provide credentials to an application in order to authorize machine-to-machine requests
+
 ### User Pool
 >The principle resource used to 
 - define users, 
 - define client/server integrations
 - Authenticate users and applications
+
 ### Resource Server
->
+- Manages access-protected resources. (**ONE OR MORE** services in the same business domain)
+- handles authenticated requests from an app that has an access token.
+- defines all scopes in that business domain
+
 ### Application Client
->Client credentials and scopes used to consume 
+- defines client Id and client secret
+- declares one or more resource server scopes scopes 
 
 ## ADR
 ### Why Shell?
@@ -31,10 +39,9 @@
 
 ### Why not SAM?
 - Cloudformation vs Terraform
-- Local envoke vs fly cli
-    - We created some custom functionality to run locally
+- Resources that were not initially created with SAM cannot be migrated 
 
-### Why not SDK?
+### Why not CDK?
 - CloudFormation vs Terraform
 
 # Crosscutting Concerns
@@ -58,15 +65,21 @@
 [* increase from default to max must be explicity requested](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase)
 
 
-# Client Credentials Flow
 
-## Deployment
+# Deployment
+
 ### Concourse
-- Yaml Anchors
-- Across: Modifier (experimental)
-    - Reduced redundancy 
+- [Yaml Anchors](https://docs.concourse.farm/cookbook/use-yaml-anchor-and-alias)
+- [Across Step Modifier](https://concourse-ci.org/across-step.html)
+    - DRY
     - external environments.yaml scripts
+>Run a step multiple times with different combinations of variable values.
+across is considered an experimental feature, and its syntax/semantics may change. To you must set the feature flag CONCOURSE_ENABLE_ACROSS_STEP.
+>
+>The across step can be combined with the load_var step, the set_pipeline step, and instanced pipelines to maintain a dynamically sized group of related pipelines.
+
 - AWS CLI
+    - Get resource Id limitations (max results)
 
 ## Self Service
 - Create ClientId/ClientSecret with concourse tasks
@@ -88,6 +101,25 @@ iac-eb-central
         - User pool tags
 
 
-## Authentication Code Flow
+## Future Development
 
-TBD
+### Authentication Code grant 
+- preferred method for authorizing end users
+- Instead of directly providing user pool tokens to an end user upon authentication, an authorization code is provided
+- Authorization code is exchanged for the desired tokens
+
+## SAML 2.0
+- ADFS federation
+- Used to federate to corporate identity providers
+
+## OpenID Connect
+- identity layer built on top of the OAuth 2.0 framework
+
+## Federation (Social providers)
+- TrimbleId
+
+## Not Covered
+
+### Implicit grant 
+- Only use the implicit grant when there’s a specific reason that the authorization code grant can’t be used
+- User pool tokens are exposed directly to the end user.
