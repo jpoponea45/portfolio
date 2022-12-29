@@ -94,26 +94,34 @@ across is considered an experimental feature, and its syntax/semantics may chang
 
 # DevOps
 
-New IAC repo for scripts that 
-- deploy user pools or resource servers
-- delete any resource
-
-iac-eb-central
-- Deploy User Pools
-- Define Resource Servers
+[iac-eb-central](https://github.com/e-buildernoc/iac-eb-central)
+- deploy User Pools
+- define Resource Servers
     - Manage scopes
         - Per endpoint 
         - CRUD
-- Integration Testing
+- delete any resource
+- integration Testing
     - Create and teardown Userpool, ResourceServer, AppClient
     - Governance
         - iac-eb-central repository
         - User pool tags
 
+[iac.eb-central.yam](https://github.com/e-buildernoc/concourse-ci-pipelines/blob/main/pipeline-templates/iac-eb-central.yaml)
 
-## Future Development
+# Status
+### Successfully deployed to 
+  - DEV1
+  - QA2,4,7
+  - Perf
+  - US
+  - CAN
 
-### Authentication Code grant 
+
+
+# Future Development
+
+## Authentication Code grant 
 - preferred method for authorizing end users
 - Instead of directly providing user pool tokens to an end user upon authentication, an authorization code is provided
 - Authorization code is exchanged for the desired tokens
