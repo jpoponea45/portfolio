@@ -14,7 +14,6 @@ AWS Cognito allows us to create a centralized identity solution that supports
 - intended to provide credentials to an application in order to authorize machine-to-machine requests
 
 ### User Pool
->The principle resource used to 
 - define users, 
 - define client/server integrations
 - Authenticate users and applications
@@ -46,10 +45,11 @@ AWS Cognito allows us to create a centralized identity solution that supports
 
 # Crosscutting Concerns
 ## Logging
-- CloudTrail 
-- Sumo Logic (collectors)
+- [CloudTrail](https://docs.aws.amazon.com/cognito/latest/developerguide/logging-using-cloudtrail.html)
+- [Sumo Logic (collectors)](https://help.sumologic.com/docs/integrations/amazon-aws/cloudtrail/)
+
 ## Monitoring
-- CloudWatch
+- [CloudWatch](https://docs.aws.amazon.com/cognito/latest/developerguide/monitoring.html) (monitor, report and take automatic actions in case of an event in near real time)
 
 ## Quotas/Limitations (default/max)
 - Resource servers per user pool (25/300)
