@@ -112,10 +112,12 @@ across is considered an experimental feature, and its syntax/semantics may chang
 # Status
 ### Successfully deployed to 
   - DEV1
-  - QA2,4,7
-  - Perf
-  - US
-  - CAN
+  - QA4,7,8
+  - Pf2
+  - US1,2,3,4
+  - CAN1
+
+GC1 (An error occurred (UnrecognizedClientException) when calling the ListUserPools operation: The security token included in the request is invalid.)
 
 
 
