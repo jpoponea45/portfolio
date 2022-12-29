@@ -11,11 +11,11 @@ AWS Cognito allows us to create a centralized identity solution that supports
 - intended to provide credentials to an application in order to authorize machine-to-machine requests
 
 # AWS Cognito 
-- AWS identity and access management
+## AWS identity and access management
 
 ## User Pool
-- define users, 
-- define client/server integrations
+- define users
+- define server to server integrations
 - Authenticate users and applications
 
 ![Userpool](https://docs.aws.amazon.com/images/cognito/latest/developerguide/images/scenario-authentication-cup.png)
@@ -93,6 +93,11 @@ across is considered an experimental feature, and its syntax/semantics may chang
 
 
 # DevOps
+
+New IAC repo for scripts that 
+- deploy user pools or resource servers
+- delete any resource
+
 iac-eb-central
 - Deploy User Pools
 - Define Resource Servers
