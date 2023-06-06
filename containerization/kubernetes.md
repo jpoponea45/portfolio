@@ -1,15 +1,3 @@
-# Platform as a Service
-## Docker
-* Engine 
-    * dockerd (daemon)
-    * Images
-    * Containers
-    * Services
-    * Volumes
-* Tools
-    * Docker Compose (multicontainer applications)
-    * Docker Swarm (Clustering)
-    * Docker Volume (Disk persistence)
 
 # Kubernetes
 > open-source container-orchestration system for automating computer application deployment, scaling, and management
@@ -91,4 +79,9 @@ Basic scheduling unit
  > queries agains lables that resolve matching objects
 
 
+## Sidecar Pattern
 
+Containers that run along with the main container in the pod.  
+Used to wrap all depedencies for the application to run anywhere
+
+![Pod with sidecars](https://miro.medium.com/max/1400/1*2O7FNVCO5k83WIbbGbbl-A.webp)
