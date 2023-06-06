@@ -30,6 +30,7 @@ AWS Cognito allows us to create a centralized identity solution that supports
 ## Application Client
 - Entity within a user pool that has permission to call unauthenticated API operations
 - confidential client with a client secret
+- client credentials cannot be changed, a new app client must be created
 
 
 # ADRs
@@ -74,7 +75,7 @@ AWS Cognito allows us to create a centralized identity solution that supports
 # Deployment
 
 ## Concourse
-- [Yaml Anchors](https://docs.concourse.farm/cookbook/use-yaml-anchor-and-alias)
+- [Yaml Anchors & Aliases](https://docs.concourse.farm/cookbook/use-yaml-anchor-and-alias)
 - [Across Step Modifier](https://concourse-ci.org/across-step.html)
     - DRY
     - external environments.yaml scripts
@@ -116,14 +117,13 @@ across is considered an experimental feature, and its syntax/semantics may chang
   - Pf2
   - US1,2,3,4
   - CAN1
-
-GC1 (An error occurred (UnrecognizedClientException) when calling the ListUserPools operation: The security token included in the request is invalid.)
+  - GC1 
 
 
 
 # Future Development
 
-## Authentication Code grant 
+## Authentication Code Grant 
 - preferred method for authorizing end users
 - Instead of directly providing user pool tokens to an end user upon authentication, an authorization code is provided
 - Authorization code is exchanged for the desired tokens
@@ -143,3 +143,16 @@ GC1 (An error occurred (UnrecognizedClientException) when calling the ListUserPo
 ### Implicit grant 
 - Only use the implicit grant when there’s a specific reason that the authorization code grant can’t be used
 - User pool tokens are exposed directly to the end user.
+
+
+
+
+# Logging and Monitoring
+
+Confidential Client 
+
+Authorization Code
+
+CloudTrail
+
+Sumologic
