@@ -1,0 +1,6 @@
+ENVIRONMENT_ID=dev1
+DOMAIN=filemanagement
+BASE_VOLUME_HANDLE="${ENVIRONMENT_ID}.${DOMAIN}.smb-vh"
+VOLUME_SOURCE=//10.70.8.227/fss-np-qa
+
+echo "${BASE_VOLUME_HANDLE}${VOLUME_SOURCE}" | sed -r 's/\/+/-/g'
